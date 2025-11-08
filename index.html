@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DECORA BANGLADESH - Premium Art Materials & Decorative Products</title>
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #faf8f6;
+      color: #3a2e1a;
+      line-height: 1.6;
+    }
+    a {
+      color: #a57529;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-color: #a7752a;
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      box-shadow: 0 3px 7px rgba(167, 117, 42, 0.7);
+    }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #d8c292;
+      color: #5a4615;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero img {
+      width: 480px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(167, 117, 42, 0.35);
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+    .hero-content {
+      max-width: 520px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+      color: #a7752a;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      margin-bottom: 28px;
+      color: #5a4b1c;
+    }
+    .hero-content .btn {
+      background-color: #a7752a;
+      color: white;
+      padding: 14px 30px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.05rem;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(167, 117, 42, 0.4);
+    }
+    .hero-content .btn:hover {
+      background-color: #855f1d;
+      box-shadow: 0 6px 18px rgba(133, 95, 29, 0.6);
+    }
+
+    /* Products Section */
+    section.products {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    .products h2 {
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 36px;
+      color: #a7752a;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 7px 25px rgba(167, 117, 42, 0.12);
+      padding: 24px 20px 30px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .product-card:hover {
+      box-shadow: 0 10px 40px rgba(167, 117, 42, 0.25);
+      transform: translateY(-8px);
+    }
+    .product-card img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(167, 117, 42, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+    .product-card h3 {
+      color: #926c13;
+      font-weight: 700;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+    .product-card p {
+      color: #5b4a19;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Gallery Section */
+    section.gallery {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    section.gallery h2 {
+      color: #a7752a;
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    section.gallery p {
+      font-size: 1.1rem;
+      color: #4c3d11;
+      margin-bottom: 28px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gallery-image {
+      max-width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 14px 32px rgba(167, 117, 42, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery-image:hover {
+      transform: scale(1.03);
+    }
+
+    /* About Section */
+    section#about {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    section#about h2 {
+      color: #a7752a;
+      font-size: 2.4rem;
+      margin-bottom: 1em;
+      font-weight: 700;
+    }
+    section#about p {
+      font-size: 1.1rem;
+      color: #4c3d11;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #a7752a;
+      color: #fffbea;
+      text-align: center;
+      padding: 22px 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-content {
+        max-width: 100%;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    DECORA BANGLADESH
+    <nav aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Featured Decorative Jharoka">
+      <img src="https://i.imgur.com/MP0bFKn.jpg" alt="Decorative Jharoka Display by DECORA BANGLADESH" />
+      <div class="hero-content">
+        <h1>The Iconic Decorative Jharoka</h1>
+        <p>
+          DECORA BANGLADESH proudly presents this beautifully crafted decorative Jharoka. A perfect symbol of tradition meeting modern artistry, showcasing our passion for quality art materials and elegant designs.
+        </p>
+        <button class="btn" aria-label="Explore Our Products">Explore Our Products</button>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products" aria-labelledby="products-title">
+      <h2 id="products-title">Our Art Materials & Products</h2>
+      <div class="product-list">
+
+        <article class="product-card" tabindex="0">
+          <img src="https://i.imgur.com/MP0bFKn.jpg" alt="Decorative Jharoka" />
+          <h3>Decorative Jharoka</h3>
+          <p>Beautifully crafted Jharoka showcasing intricate traditional design and warm, inviting lighting.</p>
+        </article>
+
+        <article class="product-card" tabindex="0">
+          <img src="https://i.imgur.com/tCVK6q3.jpg" alt="Wooden Decorative Panels" />
+          <h3>Wooden Decorative Panels</h3>
+          <p>Elegant wooden art panels with intricate arch cutouts, perfect for wall decor or display.</p>
+        </article>
+
+        <article class="product-card" tabindex="0">
+          <img src="https://i.imgur.com/McCd0ij.jpg" alt="Premium Paints" />
+          <h3>Premium Paints</h3>
+          <p>Rich, vibrant colors made for professional artists requiring longevity and brilliant finish.</p>
+        </article>
+
+        <article class="product-card" tabindex="0">
+          <img src=file:///E:/Decora%20product%202/ready%201/jharoka.jpeg
+        alt="Gigantic jharoka" />
+          <h3>Gigantic jharoka</h3>
+          <p>Crafted from high-quality MDF, the Gigantic Jharoka is perfect for creative art and resin projects. Its detailed arch design offers a grand base for painting, resin work, or decorative customization — bringing traditional charm to your artistic creations.</p>
+        </article>
+
+        <article class="product-card" tabindex="0">
+          <img src="file:///E:/Decora%20product%203/Ready%20projects/Gemini_Generated_Image_xf4r5txf4r5txf4r.png" 
+          alt="Decorative tissue box" />
+          <h3>Decorative tissue box</h3>
+          <p>Crafted from high-quality MDF, this elegant tissue box blends durability with minimalist design. Perfect for any home or studio — you can paint, decorate, or resin it to match your personal style.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Gallery</h2>
+      <p>Experience the unique beauty of our decorative Jharokas and art materials — blending tradition with modern design.</p>
+
+
+      <img src=file:///E:/Decora%20product%202/ready%201/jharoka.jpeg
+       <p>Decorative tissue box.<p>
+       <img src=file:///E:/Decora%20product%203/Ready%20projects/Gemini_Generated_Image_xf4r5txf4r5txf4r.png
+
+
+        src="https://i.imgur.com/PmDQJjD.jpg"
+        alt="Decorative wooden jharoka panels in warm light"
+      />
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About DECORA BANGLADESH</h2>
+      <p>
+        DECORA BANGLADESH is a premium art material brand dedicated to inspiring creativity through quality products. From paints and brushes to decorative pieces like Jharoka, we blend tradition with innovation to support artists everywhere.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 DECORA BANGLADESH | All Rights Reserved
+  </footer>
+</body>
+</html>
