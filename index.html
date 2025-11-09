@@ -5,144 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DECORA BANGLADESH - Premium Art Materials & Decorative Products</title>
   <style>
-    /* Reset & Base */
     *, *::before, *::after {
       box-sizing: border-box;
     }
-     <header>
-  <div class="header-container">
-    <a href="#home" class="logo-link" aria-label="DECORA BANGLADESH Home">
-      <img src="images/logo.jpeg" alt="DECORA BANGLADESH Logo" class="logo" />
-    </a>
-    <h1 class="brand-name">DECORA BANGLADESH</h1>
-    <nav aria-label="Primary navigation" class="primary-nav">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+    body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #faf8f6;
-      color: #3a2e1a;
+      background: #faf7ef;
+      color: #8b6c2b;
       line-height: 1.6;
     }
     a {
-     body {
-        color: #a57529;
+      color: #a57529;
       text-decoration: none;
     }
-    a:hover {
+    a:hover, a:focus {
       text-decoration: underline;
+      outline: none;
     }
-
-   header {
-  background-color: #a7752a;
-  box-shadow: 0 3px 7px rgba(167, 117, 42, 0.7);
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* Logo styling */
-.logo-link {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.logo {
-  display: block;
-  height: 60px;
-  width: auto;
-}
-
-/* Brand name styling */
-.brand-name {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #fff;
-  flex-grow: 1;
-  white-space: nowrap;
-}
-
-/* Navigation styles */
-.primary-nav {
-  display: flex;
-  gap: 25px;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.primary-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  white-space: nowrap;
-}
-
-.primary-nav a:hover,
-.primary-nav a:focus {
-  background-color: #d8c292;
-  color: #5a4615;
-  outline: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .brand-name {
-    order: 3;
-    width: 100%;
-    text-align: center;
-  }
-
-  .primary-nav {
-    order: 2;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .logo-link {
-    order: 1;
-    margin-right: 0;
-    align-self: center;
-  }
-}
-    /* Hero Section */
+    header {
+      background-color: #a7752a;
+      padding: 15px 30px;
+      box-shadow: 0 3px 7px rgba(167, 117, 42, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: white;
+      flex-grow: 1;
+      white-space: nowrap;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      color: white;
+      white-space: nowrap;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #d8c292;
+      color: #5a4615;
+    }
+    main {
+      max-width: 1200px;
+      margin: 50px auto 70px;
+      padding: 0 20px;
+    }
     .hero {
       display: flex;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
       gap: 50px;
       align-items: center;
-      justify-content: center;
+      background: #fff9f0;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(167,117,42,0.15);
+      padding: 40px;
+      flex-wrap: wrap;
     }
     .hero img {
       width: 480px;
       max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(167, 117, 42, 0.35);
+      border-radius: 14px;
+      box-shadow: 0 15px 35px rgba(167, 117, 42, 0.2);
       object-fit: contain;
       transition: transform 0.3s ease;
     }
@@ -151,188 +96,203 @@
     }
     .hero-content {
       max-width: 520px;
+      flex: 1;
+      min-width: 280px;
     }
     .hero-content h1 {
       font-size: 2.8rem;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       font-weight: 700;
       color: #a7752a;
     }
     .hero-content p {
       font-size: 1.15rem;
-      margin-bottom: 28px;
-      color: #5a4b1c;
+      margin-bottom: 32px;
     }
     .hero-content .btn {
       background-color: #a7752a;
       color: white;
-      padding: 14px 30px;
-      font-weight: 600;
+      padding: 14px 32px;
+      font-weight: 700;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 1.05rem;
-      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      display: inline-block;
-      box-shadow: 0 4px 12px rgba(167, 117, 42, 0.4);
+      box-shadow: 0 6px 18px rgba(167, 117, 42, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .hero-content .btn:hover {
+    .hero-content .btn:hover, .hero-content .btn:focus {
       background-color: #855f1d;
-      box-shadow: 0 6px 18px rgba(133, 95, 29, 0.6);
+      box-shadow: 0 8px 24px rgba(133, 95, 29, 0.6);
+      outline: none;
     }
-
-    /* Products Section */
     section.products {
-      max-width: 1100px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
+      margin-top: 50px;
     }
-    .products h2 {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 36px;
-      color: #a7752a;
+    section.products h2 {
       font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 2.4rem;
+      color: #a7752a;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: 1.8px;
     }
     .product-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 10px;
     }
     .product-card {
       background: white;
       border-radius: 14px;
-      box-shadow: 0 7px 25px rgba(167, 117, 42, 0.12);
-      padding: 24px 20px 30px;
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      cursor: default;
+      box-shadow: 0 8px 30px rgba(167, 117, 42, 0.12);
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
     .product-card:hover {
-      box-shadow: 0 10px 40px rgba(167, 117, 42, 0.25);
-      transform: translateY(-8px);
+      box-shadow: 0 12px 45px rgba(167, 117, 42, 0.25);
+      transform: translateY(-6px);
     }
     .product-card img {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
+      max-width: 100%;
       border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 18px rgba(167, 117, 42, 0.2);
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(167, 117, 42, 0.2);
       transition: transform 0.3s ease;
     }
     .product-card img:hover {
       transform: scale(1.05);
     }
     .product-card h3 {
-      color: #926c13;
       font-weight: 700;
-      margin-bottom: 14px;
       font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #926c13;
     }
     .product-card p {
       color: #5b4a19;
       font-size: 1rem;
       line-height: 1.5;
     }
-
-    /* Gallery Section */
     section.gallery {
+      margin-top: 60px;
       max-width: 1100px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
+      padding: 0 20px;
     }
     section.gallery h2 {
-      color: #a7752a;
       font-size: 2.6rem;
-      margin-bottom: 16px;
-      font-weight: 700;
+      color: #a7752a;
       letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 24px;
     }
     section.gallery p {
       font-size: 1.1rem;
       color: #4c3d11;
-      margin-bottom: 28px;
-      max-width: 700px;
+      margin-bottom: 30px;
+      max-width: 750px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
-    .gallery-image {
-      max-width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 14px 32px rgba(167, 117, 42, 0.3);
+    .gallery-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      margin-top: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 10px 35px rgba(167, 117, 42, 0.2);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
-    .gallery-image:hover {
-      transform: scale(1.03);
+    .gallery-grid img:hover {
+      transform: scale(1.05);
     }
-
-    /* About Section */
-    section#about {
-      max-width: 1100px;
-      margin: 0 auto 60px;
+    section.about {
+      max-width: 900px;
+      margin: 75px auto 50px;
       padding: 0 20px;
     }
-    section#about h2 {
-      color: #a7752a;
-      font-size: 2.4rem;
-      margin-bottom: 1em;
+    section.about h2 {
+      font-size: 2.2rem;
       font-weight: 700;
+      color: #a7752a;
+      margin-bottom: 20px;
+      text-align: center;
     }
-    section#about p {
-      font-size: 1.1rem;
+    section.about p {
+      font-size: 1.15rem;
       color: #4c3d11;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       line-height: 1.7;
+      text-align: center;
     }
-
-    /* Footer */
     footer {
       background-color: #a7752a;
-      color: #fffbea;
       text-align: center;
-      padding: 22px 10px;
+      padding: 20px 10px;
+      color: #fffbea;
       font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 1.5px;
+      font-size: 0.95rem;
+      letter-spacing: 1.3px;
       user-select: none;
+      margin-top: 70px;
     }
-
-    /* Responsive */
+    footer a {
+      color: #fffbea;
+      text-decoration: underline;
+      margin: 0 12px;
+      transition: color 0.3s ease;
+    }
+    footer a:hover, footer a:focus {
+      color: #d8c292;
+      outline: none;
+    }
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
-        text-align: center;
+        padding: 25px 20px;
+        gap: 35px;
       }
       .hero-content {
         max-width: 100%;
+        text-align: center;
       }
       nav {
+        justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    DECORA BANGLADESH
-    <nav aria-label="Primary navigation">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-container">
+      <a href="#home" aria-label="DECORA BANGLADESH Home" class="logo-link">
+        <img src="images/logo.jpeg" alt="DECORA BANGLADESH Logo" class="logo" />
+      </a>
+      <h1 class="brand-name">DECORA BANGLADESH</h1>
+      <nav aria-label="Primary navigation" class="primary-nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -352,38 +312,35 @@
     <section class="products" id="products" aria-labelledby="products-title">
       <h2 id="products-title">Our Art Materials & Products</h2>
       <div class="product-list">
-
         <article class="product-card" tabindex="0">
-          <img src="https://i.imgur.com/MP0bFKn.jpg" alt="Decorative Jharoka" />
+          <img src="images/jharoka.jpeg" alt="Decorative Jharoka" />
           <h3>Decorative Jharoka</h3>
           <p>Beautifully crafted Jharoka showcasing intricate traditional design and warm, inviting lighting.</p>
         </article>
 
         <article class="product-card" tabindex="0">
-          <img src="images/stationery-stand.jpeg" alt="Customizable Premium Stationery Holder" />
+          <img src="images/stationery-stand.jpeg" alt="Stationery Holder" />
           <h3>Customizable Premium Stationery Holder</h3>
-          <p>Organize your workspace in style with this elegant MDF stationery holder. Its smooth, durable surface is perfect for painting, resin work, or creative customization — making it both functional and uniquely yours..</p>
+          <p>Organize your workspace with this elegant MDF stationery holder, perfect for painting, resin work, or creative customization.</p>
         </article>
 
         <article class="product-card" tabindex="0">
-          <img src="https://i.imgur.com/McCd0ij.jpg" alt="Premium Paints" />
+          <img src="images/premium-paints.jpg" alt="Premium Paints" />
           <h3>Premium Paints</h3>
           <p>Rich, vibrant colors made for professional artists requiring longevity and brilliant finish.</p>
         </article>
 
         <article class="product-card" tabindex="0">
-          <img src="images/jharoka.jpeg" />
-          <h3>Gigantic jharoka</h3>
-          <p>Crafted from high-quality MDF, the Gigantic Jharoka is perfect for creative art and resin projects. Its detailed arch design offers a grand base for painting, resin work, or decorative customization — bringing traditional charm to your artistic creations.</p>
+          <img src="images/gigantic-jharoka.jpg" alt="Gigantic Jharoka" />
+          <h3>Gigantic Jharoka</h3>
+          <p>Crafted from high-quality MDF, the Gigantic Jharoka is ideal for creative art and resin projects, blending traditional charm with artistic innovation.</p>
         </article>
 
         <article class="product-card" tabindex="0">
-          <img src="images/tissue-box.png" 
-          alt="Decorative tissue box" />
-          <h3>Decorative tissue box</h3>
-          <p>Crafted from high-quality MDF, this elegant tissue box blends durability with minimalist design. Perfect for any home or studio — you can paint, decorate, or resin it to match your personal style.</p>
+          <img src="images/tissue-box.png" alt="Decorative Tissue Box" />
+          <h3>Decorative Tissue Box</h3>
+          <p>Elegant MDF tissue box that you can paint and decorate to match your personal style.</p>
         </article>
-
       </div>
     </section>
 
@@ -391,20 +348,16 @@
     <section class="gallery" id="gallery" aria-labelledby="gallery-title">
       <h2 id="gallery-title">Gallery</h2>
       <p>Experience the unique beauty of our decorative Jharokas and art materials — blending tradition with modern design.</p>
-
-
-      <img src=file:///E:/Decora%20product%202/ready%201/jharoka.jpeg
-       <p>Decorative tissue box.<p>
-       <img src=file:///E:/Decora%20product%203/Ready%20projects/Gemini_Generated_Image_xf4r5txf4r5txf4r.png
-
-
-        src="https://i.imgur.com/PmDQJjD.jpg"
-        alt="Decorative wooden jharoka panels in warm light"
-      />
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Decorative wooden jharoka panels in warm light" />
+        <img src="images/gallery2.jpg" alt="Close-up of crafted art material" />
+        <img src="images/gallery3.jpg" alt="Artistic paint set arranged" />
+        <img src="images/gallery4.jpg" alt="Decorative resin art pieces" />
+      </div>
     </section>
 
     <!-- About -->
-    <section id="about" aria-labelledby="about-title">
+    <section class="about" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About DECORA BANGLADESH</h2>
       <p>
         DECORA BANGLADESH is a premium art material brand dedicated to inspiring creativity through quality products. From paints and brushes to decorative pieces like Jharoka, we blend tradition with innovation to support artists everywhere.
@@ -412,20 +365,15 @@
     </section>
   </main>
 
-  <footer>
-    &copy; 2024 DECORA BANGLADESH | All Rights Reserved
+  <footer id="contact" aria-label="Contact and social links">
+    <p>
+      &copy; 2024 DECORA BANGLADESH | All Rights Reserved
+    </p>
+    <p>
+      Visit us on 
+      <a href="https://www.facebook.com/tarusartmaterials" target="_blank" rel="noopener noreferrer">Facebook</a> and 
+      <a href="https://www.youtube.com/@DecoraBangladesh" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
